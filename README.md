@@ -3,7 +3,7 @@
 Super tof dat je interesse hebt om bij Centraal Beheer aan de slag te gaan! We werken elke dag met een grote groep van developers aan de website van Centraal Beheer. Deze groep van developers willen we heel graag uitbreiden. Daarbij vinden we opleiding, werkervaring of achtergrond eigenlijk helemaal niet zo waardevol. Belangrijker is dat je talent hebt en de juiste motivatie. Daarom kun je bij ons ook solliciteren door mee te doen aan onze code-challenge. 
 
 ## Wat is de Centraal Beheer Code challenge?
-De Centraal Beheer code challenge is een laagdrempelige front-end opdracht waarbij je een aantal nieuwe functionaliteiten bouwt voor een voorbeeld-applicatie. 
+De Centraal Beheer code challenge is een laagdrempelige front-end opdracht waarbij je een aantal nieuwe functionaliteiten bouwt voor een voorbeeld-applicatie. Wij reviewen je code, vinden we jouw oplossing tof? Dan nodigen we je graag uit voor een eerste kennismakingsgesprek.
 
 ## De challenge
 Bij Centraal Beheer werken we veel met formulieren. Formulieren om je schade te melden, een nieuwe verzekering af te sluiten, etc.
@@ -27,6 +27,10 @@ Functionaliteiten:
         - auto
         - motor
         - scooter
+- Wijzig de afbeelding rechts van het formulier op basis van de keuze van de gebruiker. De volgende combinaties zijn mogelijk:
+    - auto: assets/auto.jpg
+    - motor: assets/motor.jpg
+    - scooter: assets/scooter.jpg     
 - Kiezen subtype voertuig:
     - Mogelijke subtypes voor voertuig auto:
         - Hatchback
@@ -49,13 +53,19 @@ Functionaliteiten:
 - Implementeer kenteken formatting als volgt:
     - Voeg een streepje in tussen de cijfers en letters van het kenteken. AA14BB wordt dan dus AA-14-BB
     - Bij lettercombinaties van 4 karakters: voeg een streepje in na 2 karakters. 12AABB wordt dan dus 12-AA-BB
-- Implementeer een basis kenteken validatie per voertuig:
+- Implementeer een basis kenteken validatie:
     - Maak gebruik van de volgende library om kenteken validatie te implementeren: https://www.npmjs.com/package/rdw-kenteken-check
- 
+    - Is de ingevoerde waarde invalid? Toon dan de volgende error-message (on-blur van het veld): "Helaas is het ingevoerde kenteken niet geldig. Probeer het opnieuw." 
+- Implementeer een basis meldcode validatie:
+    - De meldcode moet bestaan uit exact 4 karakters en mag uitsluitend nummers bevatten. 
+    - Is de ingevoerde waarde invalid? Toon dan de volgende error-message (on-blur van het veld): "Helaas is de ingevoerde meldcode niet geldig. Probeer het opnieuw." 
 - Technische vereisten:
     - Splits de html op in logische Angular componenten
     - Maak gebruik van Angular dynamic forms om je formulier op te bouwen
     
+## Extra uitdaging?
+- Wil je laten zien wat je nog meer kunt? Kun je bijvoorbeeld al unit testen schrijven, heb je ervaring met NGRX of ben je dol op UX en vind je de huidige opzet wel wat mager? Voeg je eigen idee toe aan de voorbeeldapp!
+
 ## Randvoorwaarden
 - Om de challenge gelijkwaardig te houden voor alle kandidaten verwachten we dat je niet meer dan 2 - max 4 uur aan de challenge besteedt. Nog niet klaar met alle requirements na 4 uur? Geen probleem, stuur gewoon in wat je hebt. We vinden kwaliteit en oog voor details veel belangrijker dan dat je alle requirements hebt gerealiseerd.
 - Maak een fork van deze Github naar je eigen Github account en commit jouw oplossing. Stuur ons een linkje van je oplossing.

@@ -12,17 +12,33 @@
       </select>
     </label>
 
+    <!-- SELECT VOERTUIG SUBTYPE-->
     <label class="block mt-4">
-      <span class="text-gray-700">Vul het kenteken van uw [voertuig] in.</span>
-      <input type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-red-400 focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="Bijvoorbeeld AA-BB-12">
+      <span class="text-gray-700">Welk type [auto/motor/brommer] hebt u?</span>
+      <select class="block w-full mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0">
+        <option>Hatchback</option>
+        <option>Sedan</option>
+        <option>Station</option>
+        <option>Cabriolet</option>
+        <option>Coupé</option>
+        <option>MPV</option>
+        <option>Terreinauto</option>
+      </select>
+    </label>
+
+    <!-- INPUT KENTEKEN -->
+    <label class="block mt-4">
+      <span class="text-gray-700">Vul het kenteken van uw [auto/motor/brommer] in.</span>
+      <input type="text" class="mt-1 block w-full rounded-md bg-yellow-400 border-red-400 focus:border-gray-500 focus:bg-yellow-300 focus:ring-0" placeholder="Bijvoorbeeld AA-BB-12">
       <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-2" role="alert">
         <div class="font-bold">Oeps, het ingevoerde kenteken is niet geldig.</div>
-        <div class="block sm:inline">Gebruik het volgende formaat AA-BB-12.</div>
+        <div class="block sm:inline">Gebruik het volgende formaat AA-12-BB.</div>
       </div>
     </label>
 
+    <!-- INPUT MELDCODE -->
     <label class="block mt-4">
-      <span class="text-gray-700">Vul de meldcode voor het voertuig met kenteken [AA-BB-12] in.</span>
+      <span class="text-gray-700">Vul de meldcode voor het voertuig met kenteken [AA-12-BB] in.</span>
       <input type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-red-400 focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="Bijvoorbeeld 1234">
       <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-2" role="alert">
         <div class="font-bold">Oeps, de ingevoerde meldcode is niet geldig.</div>

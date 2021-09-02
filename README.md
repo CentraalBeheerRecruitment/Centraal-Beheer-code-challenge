@@ -1,4 +1,66 @@
-# CbAssessment
+# Centraal Beheer Code Challenge
+
+Super tof dat je interesse hebt om bij Centraal Beheer aan de slag te gaan! We werken elke dag met een grote groep van developers aan de website van Centraal Beheer. Deze groep van developers willen we heel graag uitbreiden. Daarbij vinden we opleiding, werkervaring of achtergrond eigenlijk helemaal niet zo waardevol. Belangrijker is dat je talent hebt en de juiste motivatie. Daarom kun je bij ons ook solliciteren door mee te doen aan onze code-challenge. 
+
+## Wat is de Centraal Beheer Code challenge?
+De Centraal Beheer code challenge is een laagdrempelige front-end opdracht waarbij je een aantal nieuwe functionaliteiten bouwt voor een voorbeeld-applicatie. 
+
+## De challenge
+Bij Centraal Beheer werken we veel met formulieren. Formulieren om je schade te melden, een nieuwe verzekering af te sluiten, etc.
+
+Deze formulieren zijn vaak gebouwd in Angular. De stack die we gebruiken:
+- Sitecore als CMS
+- Angular met NGRX als front-end framework
+- ITCSS voor onze styling
+- Applicatie content, in-app personalisatie en A/B testing via Sitecore JSS
+
+In deze code challenge ga je aan de slag met een voorbeeldformulier. De styling en html is al klaar maar we missen nog wat functionaliteit.
+
+![Screenshot](screenshot.png)
+
+### Requirements:
+Bouw het voorbeeldformulier (zie src/app/app.component.html voor de huidige html) verder af. We verwachten dat je applicatie in ieder geval (een deel van) de volgende requirements bevat:
+
+Functionaliteiten:
+- Kiezen voertuig
+    - Mogelijke keuzes:
+        - auto
+        - motor
+        - scooter
+- Kiezen subtype voertuig:
+    - Mogelijke subtypes voor voertuig auto:
+        - Hatchback
+        - Sedan
+        - Station
+        - Cabriolet
+        - Coupé
+        - Multi Purpose Vehicle (MVP)
+        - Terreinauto
+    - Mogelijke subtypes voor voertuig motor:
+        - All-road
+        - Naked
+        - Enduro
+        - Race
+        - Toermotor
+        - Chopper
+        - Zijspan
+    - Mogelijke subtypes voor voertuig scooter:
+        - Geen keuze subtype mogelijk, verberg dropdown
+- Implementeer kenteken formatting als volgt:
+    - Voeg een streepje in tussen de cijfers en letters van het kenteken. AA14BB wordt dan dus AA-14-BB
+    - Bij lettercombinaties van 4 karakters: voeg een streepje in na 2 karakters. 12AABB wordt dan dus 12-AA-BB
+- Implementeer een basis kenteken validatie per voertuig:
+    - Maak gebruik van de volgende library om kenteken validatie te implementeren: https://www.npmjs.com/package/rdw-kenteken-check
+ 
+- Technische vereisten:
+    - Splits de html op in logische Angular componenten
+    - Maak gebruik van Angular dynamic forms om je formulier op te bouwen
+    
+## Randvoorwaarden
+- Om de challenge gelijkwaardig te houden voor alle kandidaten verwachten we dat je niet meer dan 2 - max 4 uur aan de challenge besteedt. Nog niet klaar met alle requirements na 4 uur? Geen probleem, stuur gewoon in wat je hebt. We vinden kwaliteit en oog voor details veel belangrijker dan dat je alle requirements hebt gerealiseerd.
+- Maak een fork van deze Github naar je eigen Github account en commit jouw oplossing. Stuur ons een linkje van je oplossing.
+
+## Technische details
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
 

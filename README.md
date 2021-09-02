@@ -64,7 +64,7 @@ Functionaliteiten:
     - Maak gebruik van Angular dynamic forms om je formulier op te bouwen
     
 ## Extra uitdaging?
-- Wil je laten zien wat je nog meer kunt? Kun je bijvoorbeeld al unit testen schrijven, heb je ervaring met NGRX of ben je dol op UX en vind je de huidige opzet wel wat mager? Voeg je eigen idee toe aan de voorbeeldapp!
+- Wil je laten zien wat je nog meer kunt? Kun je bijvoorbeeld al unit testen schrijven, heb je ervaring met NGRX of ben je dol op UX en vind je de huidige opzet wel wat mager? Ga lekker aan de gang met je eigen idee en laat ons zien wat je kunt!
 
 ## Randvoorwaarden
 - Om de challenge gelijkwaardig te houden voor alle kandidaten verwachten we dat je niet meer dan 2 - max 4 uur aan de challenge besteedt. Nog niet klaar met alle requirements na 4 uur? Geen probleem, stuur gewoon in wat je hebt. We vinden kwaliteit en oog voor details veel belangrijker dan dat je alle requirements hebt gerealiseerd.

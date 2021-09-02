@@ -61,7 +61,7 @@ Functionaliteiten:
     - Is de ingevoerde waarde invalid? Toon dan de volgende error-message (on-blur van het veld): "Helaas is de ingevoerde meldcode niet geldig. Probeer het opnieuw." 
 - Technische vereisten:
     - Splits de html op in logische Angular componenten
-    - Maak gebruik van Angular dynamic forms om je formulier op te bouwen
+    - Maak gebruik van Angular reactive forms (https://angular.io/guide/reactive-forms) om je formulier op te bouwen
     
 ## Extra uitdaging?
 - Wil je laten zien wat je nog meer kunt? Kun je bijvoorbeeld al unit testen schrijven, heb je ervaring met NGRX of ben je dol op UX en vind je de huidige opzet wel wat mager? Ga lekker aan de gang met je eigen idee en laat ons zien wat je kunt!

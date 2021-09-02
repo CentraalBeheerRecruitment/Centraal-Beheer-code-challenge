@@ -14,7 +14,7 @@ Deze formulieren zijn vaak gebouwd in Angular. De stack die we gebruiken:
 - ITCSS voor onze styling
 - Applicatie content, in-app personalisatie en A/B testing via Sitecore JSS
 
-In deze code challenge ga je aan de slag met een voorbeeldformulier. De styling en html is al klaar maar we missen nog wat functionaliteit.
+In deze code challenge ga je aan de slag met een voorbeeldformulier. De styling (we gebruiken voor deze challenge tailwind https://tailwindcss.com/) en html is al klaar maar we missen nog wat functionaliteit.
 
 ![Screenshot](screenshot.png)
 

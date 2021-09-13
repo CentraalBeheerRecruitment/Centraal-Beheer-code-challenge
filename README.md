@@ -8,11 +8,7 @@ De Centraal Beheer code challenge is een laagdrempelige front-end opdracht waarb
 ## De challenge
 Bij Centraal Beheer werken we veel met formulieren. Formulieren om je schade te melden, een nieuwe verzekering af te sluiten, etc.
 
-Deze formulieren zijn vaak gebouwd in Angular. De stack die we gebruiken:
-- Sitecore als CMS
-- Angular met NGRX als front-end framework
-- ITCSS voor onze styling
-- Applicatie content, in-app personalisatie en A/B testing via Sitecore JSS
+Deze formulieren zijn vaak gebouwd in Angular. 
 
 In deze code challenge ga je aan de slag met een voorbeeldformulier. De styling (we gebruiken voor deze challenge tailwind https://tailwindcss.com/) en html is al klaar maar we missen nog wat functionaliteit.
 
@@ -22,16 +18,16 @@ In deze code challenge ga je aan de slag met een voorbeeldformulier. De styling 
 Bouw het voorbeeldformulier (zie src/app/app.component.html voor de huidige html) verder af. We verwachten dat je applicatie in ieder geval (een deel van) de volgende requirements bevat:
 
 Functionaliteiten:
-- Kiezen voertuig
+- De gebruiker moet het type voertuig kunnen kiezen
     - Mogelijke keuzes:
         - auto
         - motor
         - scooter
-- Wijzig de afbeelding rechts van het formulier op basis van de keuze van de gebruiker. De volgende combinaties zijn mogelijk:
+- De afbeelding rechts van het formulier moet wijzigen op basis van de keuze van de gebruiker. De volgende combinaties zijn mogelijk:
     - auto: assets/auto.jpg
     - motor: assets/motor.jpg
     - scooter: assets/scooter.jpg     
-- Kiezen subtype voertuig:
+- De gebruiker moet het subtype van het voertuig kunnen kiezen.
     - Mogelijke subtypes voor voertuig auto:
         - Hatchback
         - Sedan
@@ -49,22 +45,20 @@ Functionaliteiten:
         - Chopper
         - Zijspan
     - Mogelijke subtypes voor voertuig scooter:
-        - Geen keuze subtype mogelijk, verberg dropdown
+        - Voor scooters kan de gebruiker geen subtype kiezen
 - Implementeer kenteken formatting als volgt:
     - Voeg een streepje in tussen de cijfers en letters van het kenteken. AA14BB wordt dan dus AA-14-BB
     - Bij lettercombinaties van 4 karakters: voeg een streepje in na 2 karakters. 12AABB wordt dan dus 12-AA-BB
 - Implementeer een basis kenteken validatie:
     - Maak gebruik van de volgende library om kenteken validatie te implementeren: https://www.npmjs.com/package/rdw-kenteken-check
     - Is de ingevoerde waarde invalid? Toon dan de volgende error-message (on-blur van het veld): "Helaas is het ingevoerde kenteken niet geldig. Probeer het opnieuw." 
-- Implementeer een basis meldcode validatie:
-    - De meldcode moet bestaan uit exact 4 karakters en mag uitsluitend nummers bevatten. 
-    - Is de ingevoerde waarde invalid? Toon dan de volgende error-message (on-blur van het veld): "Helaas is de ingevoerde meldcode niet geldig. Probeer het opnieuw." 
-- Technische vereisten:
-    - Splits de html op in logische Angular componenten
-    - Maak gebruik van Angular reactive forms (https://angular.io/guide/reactive-forms) om je formulier op te bouwen
+
+### Technische vereisten:
+- Splits de html op in logische Angular componenten
+- Maak gebruik van Angular dynamic forms om je formulier op te bouwen
     
 ## Extra uitdaging?
-- Wil je laten zien wat je nog meer kunt? Kun je bijvoorbeeld al unit testen schrijven, heb je ervaring met NGRX of ben je dol op UX en vind je de huidige opzet wel wat mager? Ga lekker aan de gang met je eigen idee en laat ons zien wat je kunt!
+- Wil je laten zien wat je nog meer kunt? Kun je bijvoorbeeld al unit testen schrijven, heb je ervaring met NGRX of ben je dol op UX en vind je de huidige opzet wel wat mager? Ga lekker aan de gang met je eigen idee en laat ons zien wat je kunt! Je mag natuurlijk ook Tailwind compleet verwijderen en je eigen css-implementatie toevoegen.
 
 ## Randvoorwaarden
 - Om de challenge gelijkwaardig te houden voor alle kandidaten verwachten we dat je niet meer dan 2 - max 4 uur aan de challenge besteedt. Nog niet klaar met alle requirements na 4 uur? Geen probleem, stuur gewoon in wat je hebt. We vinden kwaliteit en oog voor details veel belangrijker dan dat je alle requirements hebt gerealiseerd.

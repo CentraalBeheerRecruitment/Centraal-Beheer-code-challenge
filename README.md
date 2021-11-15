@@ -62,7 +62,7 @@ Functionaliteiten:
 
 ## Randvoorwaarden
 - Om de challenge gelijkwaardig te houden voor alle kandidaten verwachten we dat je niet meer dan 2 - max 4 uur aan de challenge besteedt. Nog niet klaar met alle requirements na 4 uur? Geen probleem, stuur gewoon in wat je hebt. We vinden kwaliteit en oog voor details veel belangrijker dan dat je alle requirements hebt gerealiseerd.
-- Maak een fork van deze Github naar je eigen Github account en push jouw oplossing. Stuur ons een linkje van je oplossing.
+- Maak een fork van deze Github naar je eigen Github account en push jouw oplossing. Stuur ons een linkje van je oplossing in het sollicitatieformulier van de vacature **Junior Front-end Developer** (https://bit.ly/3DeuwO2).
 
 ## Technische details
 

@@ -1,0 +1,60 @@
+<div class="block m-5">
+    <h2 class="text-xl font-bold text-blue-500">Voertuiginformatie opzoeken</h2>
+    <form class="p-8" [formGroup]="voertuigForm" (ngSubmit)="onSubmit()">
+        <!-- <dynamic-form [questions]="questions$ | async"></dynamic-form> -->
+
+        <!-- SELECT VOERTUIG TYPE  -->
+        <label class="block mt-4">
+            <span class="text-gray-700">Van welk type voertuig wilt u voertuiginformatie opzoeken?</span>
+            <select
+                class="block w-full mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+                name="vehicle-type" formControlName="soortVoertuig">
+                <option *ngFor="let type of voertuigType | keyvalue">
+                    {{type.value}}
+                </option>
+            </select>
+        </label>
+
+        <!-- SELECT VOERTUIG SUBTYPE -->
+        <label class="block mt-4" *ngIf="voertuigForm.get('soortVoertuig')?.value !== 'Scooter'">
+            <span class="text-gray-700">Welk type {{voertuigForm.get('soortVoertuig')?.value | lowercase}} heeft
+                u?</span>
+            <select
+                class="block w-full mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+                name="vehicle-subtype" formControlName="typeVoertuig">
+                <option *ngFor="let type of autoType | keyvalue">
+                    {{type.value}}
+                </option>
+            </select>
+        </label>
+
+        <!-- INPUT KENTEKEN -->
+        <label class="block mt-4">
+            <span class="text-gray-700">Vul het kenteken van uw {{voertuigForm.get('soortVoertuig')?.value | lowercase}}
+                in.</span>
+            <input id="kenteken" type="text"
+                class="mt-1 block w-full rounded-md bg-yellow-400 border-black-400 focus:border-gray-500 focus:bg-yellow-300 focus:ring-0"
+                name="kenteken" formControlName="kenteken" placeholder="Bijvoorbeeld AA-BB-12"
+                [value]="voertuigForm.get('kenteken')?.value | kenteken" maxlength="8">
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-2" role="alert"
+                *ngIf="!kentekenIsValid()">
+                <div class="font-bold">Oeps, het ingevoerde kenteken is niet geldig.</div>
+                <div class="block sm:inline">Gebruik het volgende formaat AA-12-BB.</div>
+            </div>
+        </label>
+
+        <div class="mt-4">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
+                Verzenden
+            </button>
+            <div class="text-red-700" *ngIf="!voertuigForm.valid && voertuigForm.touched">Vul alle waardes correct in.
+            </div>
+        </div>
+    </form>
+
+    <picture [ngSwitch]="voertuigForm.get('soortVoertuig')?.value">
+        <img *ngSwitchCase="'Auto'" src="./assets/auto.jpg" alt="auto" class="h-full w-full object-cover">
+        <img *ngSwitchCase="'Motor'" src="./assets/motor.jpg" alt="motor" class="h-full w-full object-cover">
+        <img *ngSwitchCase="'Scooter'" src="./assets/scooter.jpg" alt="scooter" class="h-full w-full object-cover">
+    </picture>
+</div>

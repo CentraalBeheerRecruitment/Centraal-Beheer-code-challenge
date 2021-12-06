@@ -10,7 +10,7 @@ Bij Centraal Beheer werken we veel met formulieren. Formulieren om je schade te 
 
 Deze formulieren zijn vaak gebouwd in Angular. 
 
-In deze code challenge ga je aan de slag met een voorbeeldformulier. De styling (we gebruiken voor deze challenge tailwind https://tailwindcss.com/) en html is al klaar maar we missen nog wat functionaliteit.
+In deze code challenge ga je aan de slag met een voorbeeldformulier. De styling (we gebruiken voor deze challenge Tailwind https://tailwindcss.com/) en html is al klaar maar we missen nog wat functionaliteit.
 
 ![Screenshot](screenshot.png)
 
@@ -55,7 +55,7 @@ Functionaliteiten:
 
 ### Technische vereisten:
 - Splits de html op in logische Angular componenten
-- Maak gebruik van Angular dynamic forms om je formulier op te bouwen
+- Maak gebruik van Angular Reactive forms om je formulier op te bouwen
     
 ## Extra uitdaging?
 - Wil je laten zien wat je nog meer kunt? Kun je bijvoorbeeld al unit testen schrijven, heb je ervaring met NGRX of ben je dol op UX en vind je de huidige opzet wel wat mager? Ga lekker aan de gang met je eigen idee en laat ons zien wat je kunt! Je mag natuurlijk ook Tailwind compleet verwijderen en je eigen css-implementatie toevoegen.

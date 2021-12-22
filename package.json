@@ -15,14 +15,15 @@
     "@angular/compiler": "~12.2.0",
     "@angular/core": "~12.2.0",
     "@angular/forms": "~12.2.0",
-    "@angular/platform-browser": "~12.2.0",
+    "@angular/platform-browser": "^12.2.6",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
     "@ngrx/store": "^12.4.0",
     "@tailwindcss/forms": "^0.3.3",
+    "rdw-kenteken-check": "^1.0.7",
     "rxjs": "~6.6.0",
     "tailwindcss": "^2.2.9",
-    "tslib": "^2.3.0",
+    "tslib": "^2.3.1",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

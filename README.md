@@ -1,3 +1,10 @@
+![image](https://user-images.githubusercontent.com/50028862/134475187-32f7f506-96f9-4d3e-9c57-60ec9fa79337.png)
+
+![image](https://user-images.githubusercontent.com/50028862/134475231-379d20b3-c614-46e1-9142-4789f18dae56.png)
+
+![image](https://user-images.githubusercontent.com/50028862/134475268-a4935832-e00c-4236-9f97-c8d054ee51b3.png)
+
+
 # Centraal Beheer code challenge
 
 Super tof dat je interesse hebt om bij Centraal Beheer aan de slag te gaan! We werken elke dag met een grote groep van developers aan de website van Centraal Beheer. Deze groep van developers willen we heel graag uitbreiden. Daarbij vinden we opleiding, werkervaring of achtergrond eigenlijk helemaal niet zo waardevol. Belangrijker is dat je talent hebt en de juiste motivatie. Daarom kun je bij ons ook solliciteren op de vacature **Junior Front-end Developer** (https://bit.ly/3DeuwO2) door mee te doen aan onze code-challenge. 

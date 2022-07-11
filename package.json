@@ -18,7 +18,7 @@
     "@angular/platform-browser": "~13.3.11",
     "@angular/platform-browser-dynamic": "~13.3.11",
     "@angular/router": "~13.3.11",
-    "@ngrx/store": "^12.4.0",
+    "@ngrx/store": "^13.2.0",
     "@tailwindcss/forms": "^0.3.3",
     "rxjs": "~6.6.0",
     "tailwindcss": "^2.2.9",

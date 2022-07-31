@@ -6,7 +6,7 @@ import {Vehicle} from "../models/vehicleModels";
 })
 // Met deze service kan ik alle voertuigen beheren en mogelijke functies op uitvoeren.
 export class VehiclesService {
-  private vehiclesList: Vehicle[] = [
+  private _vehiclesList: Vehicle[] = [
     {
       label: 'Auto',
       subtypes: [
@@ -61,11 +61,17 @@ export class VehiclesService {
       subtypes: []
     }
   ];
+  private _activeVehicle = 'None';
 
   public getVehicles() {
-    return this.vehiclesList;
+    return this._vehiclesList;
   }
-  public getVehicleNames() {
-    return Object.keys(this.vehiclesList);
+
+  public setActiveVehicle(vehicle: string) {
+    this._activeVehicle = vehicle;
+  }
+
+  public getActiveVehicle() {
+    return this._activeVehicle;
   }
 }

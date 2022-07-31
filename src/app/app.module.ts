@@ -17,7 +17,7 @@ import { LicenceInputComponent } from './pages/vehicle-form/licence-input/licenc
     AppComponent,
     VehicleFormComponent,
     VehicleSelectionInputComponent,
-    LicenceInputComponent
+    LicenceInputComponent,
   ],
   imports: [
     BrowserModule,

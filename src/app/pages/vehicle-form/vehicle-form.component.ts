@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {VehiclesService} from "../../services/vehicles.service";
 
 @Component({
   selector: 'app-vehicle-form',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehicleFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    // Deze zit erin zodat ik de afbeelding kan switchen
+    public VehiclesService: VehiclesService
+  ) {}
 
   ngOnInit(): void {
   }
-
 }

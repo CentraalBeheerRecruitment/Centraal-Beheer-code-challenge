@@ -11,7 +11,13 @@
       </button>
     </div>
   </form>
+  <!-- Ik zat in dubio of ik een class zou maken voor iedere afbeelding, en dat ik dan de class wissel of dat ik -->
+  <!-- alles erinzet en de hide zou toggelen. Uiteindelijk ben ik hiervoor gegaan omdat dit relatief het beste zou moeten -->
+  <!-- presteren. Want je verandert niet de dom, alleen de styling, en het is overzichtelijk om nieuwe afbeeldingen bij te zetten. -->
   <picture>
-    <img src="./assets/auto.jpg" alt="auto" class="object-cover h-full w-full">
+    <img [hidden]="VehiclesService.getActiveVehicle() !== 'None'" src="./assets/snelweg.jpg" alt="snelweg" class="object-cover h-full w-full">
+    <img [hidden]="VehiclesService.getActiveVehicle() !== 'Auto'" src="./assets/auto.jpg" alt="auto" class="object-cover h-full w-full">
+    <img [hidden]="VehiclesService.getActiveVehicle() !== 'Motor'" src="./assets/motor.jpg" alt="motor" class="object-cover h-full w-full">
+    <img [hidden]="VehiclesService.getActiveVehicle() !== 'Scooter'" src="./assets/scooter.jpg" alt="scooter" class="object-cover h-full w-full">
   </picture>
 </div>

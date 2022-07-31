@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import {FormControl} from '@angular/forms';
 import {KentekenCheck} from 'rdw-kenteken-check'
+import {VehiclesFormService} from "../../../services/vehicles-form.service";
 
 @Component({
   selector: 'app-licence-input',
@@ -8,12 +9,25 @@ import {KentekenCheck} from 'rdw-kenteken-check'
   styleUrls: ['./licence-input.component.css']
 })
 export class LicenceInputComponent implements OnInit {
-  licensePlate = new FormControl('');
+  licensePlate = new FormControl('', );
   validLicense: string = 'validating'; // Dit kan validating, invalid of valid worden.
 
-  constructor() {}
+  constructor(
+    public VehiclesService: VehiclesFormService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // Een custom observer die reageert op een form submission.
+    // Form wordt getouched voor mogelijke errors en daarna gecontroleerd. Als response wordt er een error gestuurd
+    // naar de server, mits dat er is.
+    this.VehiclesService.vehicleFormOb$.subscribe(() => {
+      this.licensePlate.markAsTouched();
+      this.validateLicensePlate();
+      if (this.validLicense === 'invalid' ) {
+        this.VehiclesService.setFormError()
+      }
+    });
+  }
 
   // Deze functie update het kenteken dynamisch op basis van inputs. Ik heb online verschillende functies gezien die het
   // heel programmatic oplossen. Maar ik vond dat die methodieken érg onoverzichtelijk waren. Daarbij heb ik het vermoeden
@@ -157,5 +171,4 @@ export class LicenceInputComponent implements OnInit {
   hideLicenseError() {
     return this.validLicense === 'valid' || this.validLicense === 'validating';
   }
-
 }

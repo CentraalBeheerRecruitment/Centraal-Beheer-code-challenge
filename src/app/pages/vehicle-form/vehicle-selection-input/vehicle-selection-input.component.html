@@ -10,12 +10,12 @@
     <option *ngFor="let vehicle of vehicleList; index as i;">{{ vehicle.label }}</option>
 
   </select>
-  <div
-    class="text-red-700"
-    [hidden]="validateSelectedVehicle()"
-  >
-    Er is geen voertuig geselecteerd.
-  </div>
+    <div
+      class="text-red-700"
+      [hidden]="validateSelectedVehicle()"
+    >
+      Er is geen voertuig geselecteerd.
+    </div>
 </label>
 
 <label class="block mt-4">
@@ -31,5 +31,5 @@
     <option value="geen-type" disabled hidden>Geen subtypes beschikbaar</option>
     <option *ngFor="let subtype of subtypesList; index as i;" [value]="subtype.label">{{ subtype.label }}</option>
   </select>
-  <div class="text-red-700" [hidden]="validateSelectedSubtype()">Er is geen type geselecteerd.</div>
+    <div class="text-red-700" [hidden]="validateSelectedSubtype()">Er is geen type geselecteerd.</div>
 </label>

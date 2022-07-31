@@ -1,7 +1,8 @@
 import {Component, ElementRef, ViewChild, OnInit, SimpleChanges, OnChanges} from '@angular/core';
-import {AbstractControl, FormControl, ValidationErrors, ValidatorFn, Validators} from '@angular/forms';
-import {VehiclesService} from "../../../services/vehicles.service";
+import {FormControl, Validators} from '@angular/forms';
+import {VehiclesFormService} from "../../../services/vehicles-form.service";
 import {Subtype, Vehicle} from "../../../models/vehicleModels";
+import { customRequiredValidator } from "../validators/customValidators"
 
 @Component({
   selector: 'app-vehicle-selection-input',
@@ -21,13 +22,14 @@ export class VehicleSelectionInputComponent implements OnInit  {
   selectedSubtype = new FormControl('', [
     // Een eigen custom validator die dit veld required maakt als er een voertuig geselecteerd is die subtypes heeft
     // Als het voertuig géén subtypes heeft dan wordt het null
-    this.customRequiredValidator(this.selectedVehicle)
+    customRequiredValidator(this.selectedVehicle)
   ]);
+
 
   @ViewChild('subtypeInput') subtypeInput!: ElementRef;
 
   constructor(
-    private VehiclesService: VehiclesService
+    public VehiclesService: VehiclesFormService
   ) {}
 
   ngOnInit(): void {
@@ -47,8 +49,20 @@ export class VehicleSelectionInputComponent implements OnInit  {
 
       this.VehiclesService.setActiveVehicle(value);
     })
-  }
+    this.VehiclesService.vehicleFormOb$.subscribe(() => {
 
+
+      // Een custom observer die reageert op een form submission.
+      // Form wordt getouched voor mogelijke errors en daarna gecontroleerd. Als response wordt er een error gestuurd
+      // naar de server, mits dat er is.
+      this.selectedVehicle.markAsTouched();
+      this.selectedSubtype.markAsTouched();
+
+      if (!this.validateSelectedVehicle() || !this.validateSelectedSubtype()) {
+        this.VehiclesService.setFormError()
+      }
+    });
+  }
   // Ik kon niet uitvinden hoe ik de HTML kon aanpasen op basis of de input valid was of niet. Op een manier dat er niet
   // direct al een error te zien was. Dus ik heb het met dit soort functies opgelost waarmee er eerst gechecked wordt
   // of het veld aangeraakt is.
@@ -60,22 +74,6 @@ export class VehicleSelectionInputComponent implements OnInit  {
     return !this.selectedSubtype.touched || (this.selectedSubtype.touched && !this.selectedSubtype.hasError('required'));
   }
 
-  // De custom validator factory. Dit had in een eigen bestand gekund, maar vond het ook wel prettig om alles bij elkaar te hebben.
-  // Zouden er meer komen dan had ik ze wel in een los bestand gezet.
-  customRequiredValidator(vehicle: FormControl): ValidatorFn {
-    return (control:AbstractControl) : ValidationErrors | null => {
-
-      if (control.value === 'geen-type') {
-        return null
-      } else if (!control.value && !vehicle.value) {
-        return null
-      } else if (control.value === 'kies-type') {
-        return {required: true}
-      } else {
-        return null
-      }
-    }
-  }
   // Dit maakt de subtype veld direct disabled. Als ik het in de HTML deed kwam er namelijk een runtime error.
   ngAfterViewInit(): void {
     this.subtypeInput.nativeElement.disabled = true;

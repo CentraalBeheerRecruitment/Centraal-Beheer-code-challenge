@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 
 // Functionality
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 // Components and Pages
 import { VehicleFormComponent } from './pages/vehicle-form/vehicle-form.component';
@@ -23,6 +23,7 @@ import { LicenceInputComponent } from './pages/vehicle-form/licence-input/licenc
     BrowserModule,
     StoreModule.forRoot({}, {}),
     ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

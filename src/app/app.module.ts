@@ -3,10 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
+import { VehicleFormComponent } from './pages/vehicle-form/vehicle-form.component';
+import { VehicleSelectionInputComponent } from './pages/vehicle-form/vehicle-selection-input/vehicle-selection-input.component';
+import { LicenceInputComponent } from './pages/vehicle-form/licence-input/licence-input.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VehicleFormComponent,
+    VehicleSelectionInputComponent,
+    LicenceInputComponent
   ],
   imports: [
     BrowserModule,

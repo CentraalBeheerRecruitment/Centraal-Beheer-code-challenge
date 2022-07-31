@@ -65,4 +65,7 @@ export class VehiclesService {
   public getVehicles() {
     return this.vehiclesList;
   }
+  public getVehicleNames() {
+    return Object.keys(this.vehiclesList);
+  }
 }

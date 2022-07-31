@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-licence-input',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./licence-input.component.css']
 })
 export class LicenceInputComponent implements OnInit {
+  licensePlate = new FormControl('');
 
   constructor() { }
 

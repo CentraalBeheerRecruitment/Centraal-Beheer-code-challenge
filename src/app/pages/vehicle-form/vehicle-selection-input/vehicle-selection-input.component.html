@@ -1,22 +1,30 @@
 <!-- Voertuigselectie en het subtype vind ik logisch onder elkaar. Daarom heb ik ze bij elkaar gehouden.-->
 <label class="block mt-4">
-  <span class="text-gray-700">Van welk type voertuig wilt u voertuiginformatie opzoeken?</span>
-  <select class="block w-full mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" name="vehicle-type">
-    <option>Auto</option>
-    <option>Motor</option>
-    <option>Scooter</option>
+  <span class="text-gray-700">Van welk voertuig wilt u voertuiginformatie opzoeken?</span>
+  <select
+    class="block w-full mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+    name="vehicle-type"
+    [formControl]="selectedVehicle"
+  >
+    <option value="" disabled selected hidden>Kies uw voertuig</option>
+    <option *ngFor="let vehicle of vehicleList; index as i;">{{ vehicle.label }}</option>
+
   </select>
+    <div class="text-red-700">Er is geen voertuig geselecteerd.</div>
 </label>
 
 <label class="block mt-4">
-  <span class="text-gray-700">Welk type [auto/motor/brommer] hebt u?</span>
-  <select class="block w-full mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" name="vehicle-subtype">
-    <option>Hatchback</option>
-    <option>Sedan</option>
-    <option>Station</option>
-    <option>Cabriolet</option>
-    <option>Coupé</option>
-    <option>MPV</option>
-    <option>Terreinauto</option>
+  <span class="text-gray-700">Welk type voertuig hebt u?</span>
+  <select
+    class="block w-full mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+    name="vehicle-subtype"
+    [formControl]="selectedSubtype"
+    #subtypeInput
+  >
+    <option value="" disabled selected hidden>Kies eerst een voertuig</option>
+    <option value="kies-type" disabled hidden>Kies uw type</option>
+    <option value="geen-types" disabled hidden>Geen subtypes beschikbaar</option>
+    <option *ngFor="let subtype of subtypesList; index as i;" [value]="subtype.label">{{ subtype.label }}</option>
   </select>
+    <div class="text-red-700">Er is geen type geselecteerd.</div>
 </label>

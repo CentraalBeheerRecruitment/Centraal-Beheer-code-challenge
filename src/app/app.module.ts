@@ -1,8 +1,13 @@
+// Angular Base
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
+
+// Functionality
+import { ReactiveFormsModule } from '@angular/forms';
+
+// Components and Pages
 import { VehicleFormComponent } from './pages/vehicle-form/vehicle-form.component';
 import { VehicleSelectionInputComponent } from './pages/vehicle-form/vehicle-selection-input/vehicle-selection-input.component';
 import { LicenceInputComponent } from './pages/vehicle-form/licence-input/licence-input.component';
@@ -16,7 +21,8 @@ import { LicenceInputComponent } from './pages/vehicle-form/licence-input/licenc
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({}, {}),
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

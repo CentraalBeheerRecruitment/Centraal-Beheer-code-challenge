@@ -1,6 +1,6 @@
-# Code challenge
+# Angular code challenge
 
-Super tof dat je interesse hebt om bij ons aan de slag te gaan! We werken elke dag met een grote groep van developers aan de websites van Centraal Beheer, Interpolis, Zilveren Kruis, FBTO en Avero. Deze groep van developers willen we heel graag uitbreiden. Daarbij vinden we opleiding, werkervaring of achtergrond eigenlijk helemaal niet zo waardevol. Belangrijker is dat je talent hebt en de juiste motivatie. 
+Super tof dat je interesse hebt om bij ons aan de slag te gaan! We werken elke dag met een grote groep van developers aan de websites van Centraal Beheer, Interpolis, FBTO en Avero. Deze groep van developers willen we heel graag uitbreiden. Daarbij vinden we opleiding, werkervaring of achtergrond eigenlijk helemaal niet zo waardevol. Belangrijker is dat je talent hebt en de juiste motivatie. 
 
 ## Wat is de Code challenge?
 De Code challenge is een laagdrempelige front-end opdracht waarbij je een aantal nieuwe functionaliteiten bouwt voor een voorbeeld-applicatie. Wij reviewen je code, vinden we jouw oplossing tof? Dan nodigen we je graag uit voor een eerste kennismakingsgesprek.

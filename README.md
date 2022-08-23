@@ -1,12 +1,12 @@
-# Centraal Beheer code challenge
+# Angular code challenge
 
-Super tof dat je interesse hebt om bij Centraal Beheer aan de slag te gaan! We werken elke dag met een grote groep van developers aan de website van Centraal Beheer. Deze groep van developers willen we heel graag uitbreiden. Daarbij vinden we opleiding, werkervaring of achtergrond eigenlijk helemaal niet zo waardevol. Belangrijker is dat je talent hebt en de juiste motivatie. Daarom kun je bij ons ook solliciteren op de vacature **Junior Front-end Developer** (https://bit.ly/3DeuwO2) door mee te doen aan onze code-challenge. 
+Super tof dat je interesse hebt om bij ons aan de slag te gaan! We werken elke dag met een grote groep van developers aan de websites van Centraal Beheer, Interpolis, FBTO en Avero. Deze groep van developers willen we heel graag uitbreiden. Daarbij vinden we opleiding, werkervaring of achtergrond eigenlijk helemaal niet zo waardevol. Belangrijker is dat je talent hebt en de juiste motivatie. 
 
-## Wat is de Centraal Beheer code challenge?
-De Centraal Beheer code challenge is een laagdrempelige front-end opdracht waarbij je een aantal nieuwe functionaliteiten bouwt voor een voorbeeld-applicatie. Wij reviewen je code, vinden we jouw oplossing tof? Dan nodigen we je graag uit voor een eerste kennismakingsgesprek.
+## Wat is de Code challenge?
+De Code challenge is een laagdrempelige front-end opdracht waarbij je een aantal nieuwe functionaliteiten bouwt voor een voorbeeld-applicatie. Wij reviewen je code, vinden we jouw oplossing tof? Dan nodigen we je graag uit voor een eerste kennismakingsgesprek.
 
 ## De challenge
-Bij Centraal Beheer werken we veel met formulieren. Formulieren om je schade te melden, een nieuwe verzekering af te sluiten, etc.
+We werken veel met formulieren. Formulieren om je schade te melden, een nieuwe verzekering af te sluiten, etc.
 
 Deze formulieren zijn vaak gebouwd in Angular. 
 
@@ -62,7 +62,7 @@ Functionaliteiten:
 
 ## Randvoorwaarden
 - Om de challenge gelijkwaardig te houden voor alle kandidaten verwachten we dat je niet meer dan 2 - max 4 uur aan de challenge besteedt. Nog niet klaar met alle requirements na 4 uur? Geen probleem, stuur gewoon in wat je hebt. We vinden kwaliteit en oog voor details veel belangrijker dan dat je alle requirements hebt gerealiseerd.
-- Maak een fork van deze Github naar je eigen Github account en push jouw oplossing. Stuur ons een linkje van je oplossing in het sollicitatieformulier van de vacature **Junior Front-end Developer** (https://bit.ly/3DeuwO2).
+- Maak een fork van deze Github naar je eigen Github account en push jouw oplossing. Stuur ons een linkje van je oplossing.
 
 ## Technische details
 

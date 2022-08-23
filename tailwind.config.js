@@ -1,17 +1,8 @@
 module.exports = {
-  purge: {
-    enabled: process.env.WEBPACK_DEV_SERVER === 'true' && process.argv.join(' ').indexOf('build') !== -1,
-    content: [
-      "./src/**/*.{html,ts}",
-      "./projects/**/*.{html,ts}"
-    ]
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: ["./src/**/*.{html,ts}", "./projects/**/*.{html,ts}"],
   theme: {
     extend: {},
   },
   variants: {},
-  plugins: [
-    require('@tailwindcss/forms'),
-  ],
-}
+  plugins: [require("@tailwindcss/forms")],
+};
